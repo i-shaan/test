@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var age=window.prompt("Whats your age");
+        if(age>=18)
+        document.write("<h1>Old Enough</h1>")
+        else{
+            document.write("<h1>Too Young</h1>") 
+        }
+        function isPrime(num) {
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+    }
+    function getRandomPrime() {
+    let randomNum;
+    do {
+        randomNum = Math.floor(Math.random() * 100);
+    } while (!isPrime(randomNum));
+    return randomNum;
+}
+function reverseNumber(number) {
+  let numberString = number.toString();
+  let reversedString = numberString.split('').reverse().join('');
+  return parseInt(reversedString);
+}
+// Use prompt to get a number from the user
+let userInput = prompt("Enter a number:");
+
+// Convert the user input to a number
+let userNumber = parseFloat(userInput);
+var result=reverseNumber(userNumber);
+console.log(result)
+
+
+// Example usage
+var randomPrime = parseInt(getRandomPrime());
+var rev=0,rem=0;
+document.write("<h1>Random Prime Number is:"+randomPrime+"</h1>") 
+
+
+        
+    </script>
+</body>
+</html>

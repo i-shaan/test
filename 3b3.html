@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 15px;
+            margin: 0px;
+            font-size: 25px;
+        }
+        body{
+            background-color: aqua;
+
+        }
+        .container1{
+            
+            /* padding: 15px; */
+            text-align: center;
+            height: 90vh; 
+            background-color: oldlace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        button{
+            background-color: orangered;
+            border-radius: 10px;
+            color: white;
+        }
+        .change-bg:hover{
+            background-color: black;
+            cursor: pointer;
+        }
+       
+        
+       
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="box">
+            <div class="day" >
+                Monday
+            </div>
+            <div>
+                <button class="change-bg">Change Background</button>
+            </div>
+            <div>
+                <button class="show" onclick="showDay()">Show</button>
+                <button class="hide-button" onclick="hideDay()">Hide Me</button>
+            </div>
+            
+
+
+        </div>
+
+    </div>
+    
+</body>
+<script>
+        function showDay() {
+            document.querySelector('.day').style.display = 'block';
+        }
+
+        function hideDay() {
+            document.querySelector('.day').style.display = 'none';
+        }
+</script>
+</html>
